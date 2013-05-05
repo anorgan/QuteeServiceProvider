@@ -1,0 +1,22 @@
+{
+    "name": "anorgan/qutee-service-provider",
+    "type": "library",
+    "description": "QuTee Service Provider for Silex microframework",
+    "keywords": ["silex", "qutee", "job", "task", "worker", "background"],
+    "homepage": "https://github.com/anorgan/QuteeServiceProvider",
+    "license": "LGPL-2.1+",
+    "authors": [
+        {"name": "Marin Crnković", "email": "marin.crnkovic@gmail.com"}
+    ],
+    "minimun-stability" : "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "anorgan/qutee": "*"
+    },
+    "require-dev": {
+        "silex/silex": "1.*"
+    },
+    "autoload": {
+        "psr-0": {"Qutee\\Silex": "src/"}
+    }
+}
