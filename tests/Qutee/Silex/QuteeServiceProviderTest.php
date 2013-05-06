@@ -29,9 +29,6 @@ class QuteeServiceProviderTest extends PHPUnit_Framework_TestCase
         ));
     }
 
-    /**
-     * @covers QuteeServiceProvider::register
-     */
     public function testCanRegisterProviderWithoutConfiguration()
     {
         $app = new Application();
@@ -40,9 +37,6 @@ class QuteeServiceProviderTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Qutee\Persistor\Memory', $app['qutee.queue']->getPersistor());
     }
 
-    /**
-     * @covers QuteeServiceProvider::register
-     */
     public function testCanRegisterProviderWithConfiguration()
     {
         $app = new Application();
@@ -59,33 +53,21 @@ class QuteeServiceProviderTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('\Qutee\Persistor\Redis', $app['qutee.queue']->getPersistor());
     }
 
-    /**
-     * @covers QuteeServiceProvider::register
-     */
     public function testCanGetTask()
     {
         $this->assertInstanceOf('\Qutee\Task', $this->app['qutee.task']);
     }
 
-    /**
-     * @covers QuteeServiceProvider::register
-     */
     public function testCanGetWorker()
     {
         $this->assertInstanceOf('\Qutee\Worker', $this->app['qutee.worker']);
     }
 
-    /**
-     * @covers QuteeServiceProvider::register
-     */
     public function testCanGetQueue()
     {
         $this->assertInstanceOf('\Qutee\Queue', $this->app['qutee.queue']);
     }
 
-    /**
-     * @covers QuteeServiceProvider::register
-     */
     public function testCanCreateTask()
     {
         $createdTask = $this->app['qutee.create_task']('test');
