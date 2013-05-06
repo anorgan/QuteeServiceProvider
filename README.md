@@ -1,5 +1,7 @@
 # Qutee Service Provider for Silex
 
+[![Build Status](https://travis-ci.org/anorgan/QuteeServiceProvider.png)](https://travis-ci.org/anorgan/QuteeServiceProvider)
+
 [Silex](http://silex.sensiolabs.org/) Service Provider for queue manager and task processor - [QuTee](https://github.com/anorgan/QuTee).
 
 ## Instalation
