@@ -27,6 +27,7 @@ class QuteeServiceProvider implements ServiceProviderInterface
         };
 
         $app['qutee.worker'] = function () {
+            $app['qutee.queue'];
             return new Worker();
         };
 
